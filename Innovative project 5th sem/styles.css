@@ -1,0 +1,123 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+.navbar-brand img {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+/* Navigation Bar */
+.navbar {
+    background-color: transparent; /* Set background color to transparent */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0); /* Optional: Add a border for visibility */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #fff; /* Set text color to white or the desired color */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff !important;
+  }
+  
+  /* Additional styles for the logo */
+  .navbar-brand img {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+/* Hero Section */
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.jumbotron h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.jumbotron a.btn-primary {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+/* Features Section */
+.feature {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.feature h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feature p {
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact-form {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.contact-form h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background-color: #f8f9fa;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+
+  .jumbotron p {
+    font-size: 1rem;
+  }
+
+  .feature h2 {
+    font-size: 2rem;
+  }
+
+  .feature p {
+    font-size: 1rem;
+  }
+
+  .contact-form h2 {
+    font-size: 2rem;
+  }
+}

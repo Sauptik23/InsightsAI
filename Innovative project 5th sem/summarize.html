@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextSummarizer - Summarize</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    /* Your existing styles go here */
+
+    /* Additional styles for the summarization page */
+    .summarize-container {
+  padding: 40px;
+  margin: 0px;
+  text-align: center;
+  background-image: url('bacground2.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff; /* Set text color to white or the desired color for better visibility */
+}
+
+#output {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to improve text visibility */
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Additional styles for the file upload button */
+.custom-file-label {
+  color: #495057; /* Set text color to a dark color for better visibility */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+    .summarize-container {
+      padding: 50px;
+      text-align: center;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: rgb(117, 164, 211);
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">TextSummarizer</a>
+    <!-- Include a "Home" link if needed -->
+  </nav>
+
+  <!-- Summarization Section -->
+  <div class="summarize-container">
+    <h2>Summarize Your Text or Document</h2>
+
+    <!-- Text Input Area -->
+    <div class="form-group">
+      <label for="textInput">Enter Text:</label>
+      <textarea class="form-control" id="textInput" rows="5"></textarea>
+    </div>
+
+    <!-- File Upload Button -->
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="fileInput">
+      <label class="custom-file-label" for="fileInput">Choose file</label>
+    </div>
+
+    <!-- Summarize Button -->
+    <button class="btn btn-primary mt-3" onclick="summarizeText()">Summarize</button>
+
+    <!-- Output Region -->
+    <div id="output" class="mt-4">
+      <h4>Summarized Text:</h4>
+      <p id="summarizedText"></p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for Summarization -->
+  <script>
+    function summarizeText() {
+      // Get the input text or document content
+      var inputText = document.getElementById('textInput').value;
+
+      // Perform summarization logic here (you can use a backend service or JavaScript libraries)
+
+      // For demonstration, just display the input text in the output region
+      document.getElementById('summarizedText').innerText = inputText;
+    }
+  </script>
+
+</body>
+
+</html>
