@@ -1,10 +1,12 @@
 # Text Organizer Web Application
 
-This project is a full-stack web application that utilizes HTML, CSS, and JavaScript for the frontend, Flask as the backend, and integrates a Machine Learning model. The aim of the application is to take a text file as input and organize its information.
+This project is a full-stack web application that utilizes HTML, CSS, and JavaScript for the frontend , Flask as the backend, which is used to  integrate a Machine Learning model. The aim of the application is to take a text file as input and organize its information.
+This project was done under the guidance of Professor Sumit Anand
 
 ## Features
 
 - **Text File Input:** Users can upload a text file containing unstructured information.
+- **Text Input:** Users can write the text they want to be organized.
 - **ML Model Integration:** The application incorporates a Machine Learning model that processes the text file and identifies sections to create subheadings.
 - **Dynamic Interface:** The frontend provides a user-friendly interface that dynamically displays the organized content.
 - **Flask Backend:** The backend, built with Flask, handles file uploads, interacts with the ML model, and serves processed data to the frontend.
@@ -13,31 +15,31 @@ This project is a full-stack web application that utilizes HTML, CSS, and JavaSc
 
 Before running this application, ensure you have the following installed:
 
-- Python
-- Flask
-- Tensorflow
+- Python = 3.11.x
+
 
 ## Installation and Usage
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Sauptik23/DataMap.git
-   ```
-
-2. Install the required dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the Flask application:
-
-   ```bash
-   python app.py
-   ```
-
-4. Access the application in your web browser at `http://localhost:5000`.
+### For Linux Users:
+   
+   1. Clone the repository:
+   
+      ```bash
+      git clone git@github.com:Sauptik23/InsightsAI.git
+      ```
+   
+   2. Install the required dependencies:
+   
+      ```bash
+      pip install -r requirements.txt
+      ```
+   
+   3. Navigate to the project directory and run the Flask application:
+   
+      ```bash
+      python app.py
+      ```
+   
+   4. Access the application in your web browser at `http://localhost:5000`.
 
 ## Usage Example
 
@@ -53,4 +55,4 @@ Contributions are welcome! Feel free to open issues or pull requests for any imp
 ## Acknowledgments
 
 - This project was inspired by the need to organize unstructured text data efficiently.
-- Special thanks to contributors and the open-source community for their valuable insights and support.
+- Special thanks to contributors and Professor Sumit Anand for his guidance.
