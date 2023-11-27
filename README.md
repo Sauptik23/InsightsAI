@@ -1,3 +1,4 @@
+# InsightsAI
 # Text Organizer Web Application
 
 This project is a full-stack web application that utilizes HTML, CSS, and JavaScript for the frontend , Flask as the backend, which is used to  integrate a Machine Learning model. The aim of the application is to take a text file as input and organize its information.
