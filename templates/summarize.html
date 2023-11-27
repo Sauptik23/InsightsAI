@@ -77,45 +77,53 @@
   <div class="summarize-container">
     <h2>Summarize Your Text or Document</h2>
 
-    <!-- Text Input Area -->
+    <!-- Text Input Area
     <div class="form-group">
       <label for="textInput">Enter Text:</label>
       <textarea class="form-control" id="textInput" rows="5"></textarea>
-    </div>
+    </div> -->
+
+    <!-- Form Area -->
+    <form action = "/submit_text" method = "POST">
+      <input type = "text" name = "text" />
+      <input type = "submit"/>
 
     <!-- File Upload Button -->
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="fileInput">
-      <label class="custom-file-label" for="fileInput">Choose file</label>
+      <form action="/upload_file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file_upload" accept=".txt,.pdf,.doc,.docx">
+        <input type="submit" value="Upload">
+      </form>
     </div>
 
-    <!-- Summarize Button -->
-    <button class="btn btn-primary mt-3" onclick="summarizeText()">Summarize</button>
+    <!-- Summarize Button
+    <button class="btn btn-primary mt-3" onclick=summarizeText() >Summarize</button> -->
 
     <!-- Output Region -->
     <div id="output" class="mt-4">
       <h4>Summarized Text:</h4>
-      <p id="summarizedText"></p>
+      <p id="summarizedText">{{data}}</p>
     </div>
   </div>
 
   <!-- Bootstrap JS and jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <!-- JavaScript for Summarization -->
-  <script>
+  <!-- <script>
     function summarizeText() {
       // Get the input text or document content
-      var inputText = document.getElementById('textInput').value;
+      // var inputText = document.getElementById('textInput').value;
 
       // Perform summarization logic here (you can use a backend service or JavaScript libraries)
 
       // For demonstration, just display the input text in the output region
-      document.getElementById('summarizedText').innerText = inputText;
+      // document.getElementById('summarizedText').innerText = inputText;
     }
-  </script>
+  </script> -->
 
 </body>
 
