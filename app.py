@@ -23,11 +23,21 @@ def model():
     print("Done")
     return 1
 
-@app.route("/")
-def home():    
-    l1=model()
-    print(l1)
-    return render_template("index.html")  # Render home page
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('ABOUT.html')
+
+@app.route('/how-it-works')
+def how_it_works():
+    return render_template('how-it-works.html')
+
+@app.route('/summarize')
+def summarize():
+    return render_template('summarize.html') # Render home page
 
 # def preprocess():
 
