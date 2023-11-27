@@ -28,7 +28,9 @@ def home():
     l1=model()
     print(l1)
     return render_template("index.html")  # Render home page
-    
+
+# def preprocess():
+
 
 
 @app.route("/predict", methods=["POST"])
@@ -45,29 +47,27 @@ def predict():
     # return str(output)
 
 
-@app.route("/convert", methods=["POST"])
-def convert_pdf_to_txt():
-    # Get the PDF file from the POST request
-    pdf_file = request.files["pdf"]
+def convert_file_to_txt(file_path):
+    # Get the file extension
+    _, file_extension = os.path.splitext(file_path)
 
-    # Create a PDF file reader object
-    pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+    if file_extension == '.pdf':
+        # If the file is a PDF, convert it to text
+        with open(file_path, 'rb') as pdf_file:
+            pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+            text = ''
+            for page_num in range(pdf_reader.numPages):
+                text += pdf_reader.getPage(page_num).extractText()
+        return text
 
-    # Initialize an empty string to store the extracted text
-    text = ""
+    elif file_extension == '.txt':
+        # If the file is already a text file, just read it
+        with open(file_path, 'r') as txt_file:
+            return txt_file.read()
 
-    # Loop through each page in the PDF
-    for page_num in range(pdf_reader.numPages):
-        # Extract the text from each page
-        text += pdf_reader.getPage(page_num).extractText()
-
-    # Save the extracted text to a text file
-    txt_file_path = "output.txt"
-    with open(txt_file_path, "w") as txt_file:
-        txt_file.write(text)
-
-    # Return the text file as a download
-    return send_file(txt_file_path, as_attachment=True)
+    else:
+        # If the file is neither a PDF nor a text file, raise an error
+        raise ValueError('The file must be a .pdf or .txt file')
 
 def read_file_to_sentences(file_path):
     try:
