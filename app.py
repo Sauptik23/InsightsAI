@@ -19,7 +19,7 @@ import pickle
 
 app = Flask(__name__)
 def model(): 
-    model1 = pickle.load(open('model_5.pkl', 'rb')) # Load your trained ML model
+    model1 = pickle.load(open('model/model_5.pkl', 'rb')) # Load your trained ML model
     print("Done")
     return 1
 
